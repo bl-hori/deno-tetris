@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deno Tetris</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        #tetris-board {
+            border: 2px solid #333;
+            background-color: #e0e0e0;
+        }
+        .next-piece-container {
+            margin-top: 20px;
+            border: 2px solid #333;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+        #next-piece {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+        </div>
+        <canvas id="tetris-board" width="300" height="600"></canvas>
+        <div class="next-piece-container">
+            <div>Next Piece:</div>
+            <canvas id="next-piece" width="100" height="100"></canvas>
+        </div>
+    </div>
+    <script type="module" src="/public/game.js"></script>
+</body>
+</html>
